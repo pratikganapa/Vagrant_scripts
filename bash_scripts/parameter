@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Trying the parameter script
+
+	echo " Enter your name "
+	read name
+if [ "$1" = "" ] ; then
+	echo "the value is empty"
+else
+	echo "the value of parameter is $1"
+fi 

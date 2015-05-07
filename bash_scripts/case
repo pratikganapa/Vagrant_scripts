@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "enter a number between 1 to 4"
+read number
+case $number in 
+	1 ) echo "you entered one"
+	    ;;
+	2 ) echo "you entered two"
+	    ;;
+	3 ) echo "you entered three"
+	    ;;
+	* ) echo "you did not enter any number "
+esac
+

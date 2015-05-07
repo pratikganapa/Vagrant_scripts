@@ -1,0 +1,9 @@
+#!/bin/bash
+
+path=$PATH
+
+if [  $# -eq "0" ] ; then 
+	error "Please login as root and continue the script "
+fi 
+
+

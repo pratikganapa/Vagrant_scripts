@@ -1,0 +1,12 @@
+#!/bin/bash
+
+function_1 () {
+
+	echo "this is the first function"
+	function_2 
+}
+function_2 () {
+	echo "this is function two"
+}
+
+function_1

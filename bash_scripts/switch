@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+echo "---Please select the type of drink you want---"
+echo "------------>To exit, select quit"
+select drink in tea coffee juice water beer wine quit 
+do
+     case $drink in 
+	tea|coffee)
+		echo " For you have to go to Starbucks"
+	;;
+	juice|water)
+		echo "Take from the fridge"
+	;;
+	beer|wine)
+		echo "Go to bar"
+	;;
+	quit)
+		echo "Exiting....Thanks for trying...!!"
+	break
+	;;
+	*)
+		echo "Please enter a valid selection"
+	;;
+     esac
+done
+	

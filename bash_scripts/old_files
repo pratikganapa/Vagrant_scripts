@@ -1,0 +1,14 @@
+#!/bin/bash
+
+Path=$Path
+Days=$Days 
+
+echo "Enter the path to find the files for"
+read Path
+echo "How many days old, the files should be ?"
+read Days
+
+Count=`/usr/bin/find $Path -type f -mtime +$Days | wc -l`
+
+echo "the number of files older than $Days days are $Count"
+

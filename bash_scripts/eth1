@@ -1,0 +1,23 @@
+#!/bin/bash
+
+max_value=254
+ip=$(ifconfig eth1 |grep inet\ addr | awk '{print $2}'|cut -d: -f2)
+lsv=$(ifconfig eth1 |grep inet\ addr | awk '{print $2}'|cut -d: -f2| cut -d. -f4)
+base_value=$(ifconfig eth1 |grep inet\ addr | awk '{print $2}'|cut -d: -f2| cut -d. -f1-3)
+
+	echo " The IP address is as follows: "
+	echo "$ip"
+	echo "How many ip's do you want?"
+	read count
+while [ $count -gt 0 ]
+do
+	if [ $lsv -eq $max_value ] ; then
+	   echo "Reached the max level in the subnet"
+	   exit 1 	
+	fi
+	   echo $base_value.$lsv 
+	lsv=$(( lsv + 1 )) 
+	count=$(( count - 1 ))
+done
+
+	
