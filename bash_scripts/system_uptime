@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#this program is to show the system uptime
+
+ system_uptime ( )
+{
+
+echo "the system uptime"
+
+#echo "<pre>"
+
+ watch uptime
+
+#echo "</pre>"
+
+}
+
+system_uptime
+

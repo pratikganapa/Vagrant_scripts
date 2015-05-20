@@ -1,0 +1,30 @@
+#!/bin/bash
+
+function clear_screen
+{
+	echo "Press enter to clear the screen"
+	echo ""
+	read 
+	clear
+}
+
+selection=
+
+until [ "$selection" = "0" ] ; do 
+
+	echo "Program menu"
+	echo "------>>> 1 ) press 1 to get the disk space"
+	echo "------>>> 2 ) press 2 to get the free RAM space"
+	echo "------>>> 3 ) press 3 to get the load on the system"
+	echo "------>>> 0 ) press 0 to exit"
+	echo "--------Enter selection--------"
+	echo -n "|__"
+	read selection 
+case $selection in 
+	1 ) df -h ; clear_screen ;;
+	2 ) free -m ; clear_screen ;;
+	3 ) uptime ; clear_screen ;;
+	0 ) exit ;;
+	* ) echo " Enter a valid option" ; clear_screen ;; 
+esac
+done

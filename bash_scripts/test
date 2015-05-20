@@ -1,0 +1,33 @@
+#!/bin/bash
+
+path=$path
+
+#test if the user is super user
+
+if [ $(id -u) != "0" ] ; then
+	echo "you need to be super user to execute this script"  >&2
+	exit 1
+fi
+
+
+#the real code starts from here
+if [ -f /home/pratik/.bashrc ] ; then 
+	echo "you have bashrc file"
+else
+	echo "opps, you dont have bashrc file"
+fi
+
+echo "Now that you have bashrc file, enter the path of the file to check"
+read path
+
+if [ ! -e $path ] ; then
+	echo "$path doesnot exist"
+elif [ -d $path ] ; then
+	echo "$path is a directory"
+else 
+	echo "$path is a file"
+fi
+
+
+
+ 

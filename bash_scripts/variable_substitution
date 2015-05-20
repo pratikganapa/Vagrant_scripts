@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo ${var:- variable is not set }
+echo "1- the value of variable is ${var}"
+
+echo ${var:= variable is not set}
+echo "2- the value of the variable is ${var}"
+
+unset var
+echo ${var:+ This is the default value}
+echo "3- the value of the variable is $var"
+
+var=prefix
+echo ${var:+ "this is the default value"}
+echo "4- value of var is $var"
+
+echo ${var:? Print this message}
+echo "5- the value of var is {$var}"

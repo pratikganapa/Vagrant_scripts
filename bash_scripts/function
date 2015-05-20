@@ -1,0 +1,14 @@
+#!/bin/bash
+
+hello () 
+{
+	echo "This is a test function"
+	echo $1 $2 
+	return 10
+}
+	ret=$?
+
+hello pratik ganapa 
+#ret=$?
+echo "the vaule of return is $ret"
+

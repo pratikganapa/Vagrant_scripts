@@ -1,0 +1,11 @@
+#!/bin/bash
+
+path=/home/pratik/rm
+
+if cd $path  ; then
+	rm *
+exec 2>/dev/null
+else
+	echo "unable to find the specified location"
+	exit 1
+fi

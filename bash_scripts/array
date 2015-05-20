@@ -1,0 +1,16 @@
+#!/bin/bash
+#NAME=(Pratik ganapa varapu)   #This is working
+#echo "the name is ${NAME[0]}"
+
+
+Name[0]="Pratik" # THis is also working
+Name[1]="Gana"
+Name[2]="Varapu"
+
+
+#set -A Name pratik pratikgana ganapa varapu JIbe
+
+
+echo "The value of the sring is ${Name[1]}"
+echo "The value of all the srings are ${Name[@]}"
+

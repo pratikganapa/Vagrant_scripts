@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo 'hello;world'
+
+echo It\'s a shell programing
+
+var=zara
+echo "$var \$ owes <-\$1500.**>; [ as of (`date +%m/%d`) ]"

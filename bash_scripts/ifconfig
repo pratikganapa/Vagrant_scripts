@@ -1,0 +1,38 @@
+#!/bin/bash
+
+maxvalue=255 
+
+ip=$(ifconfig eth1 | grep inet\ addr | awk '{print $2}' | cut -d: -f2)
+	echo "The ip address of this machine is "
+	echo " ---> $ip "
+	echo "How many ip addresses you need ?"
+	echo "--------------"
+	read count 
+	echo "--------------"
+	echo "The list of ip addresses are as follows:"
+	echo "--------------"
+
+if [  "$count" = "0" ] ; then 
+	echo "Ok then, you have only 1 ip address"
+fi
+
+
+#value=$(ifconfig eth1 | grep inet\ addr | awk '{print $2}' | cut -d: -f2 | cut -d. -f4)
+
+basevalue=$(ifconfig eth1 | grep inet\ addr | awk '{print $2}' | cut -d: -f2 | cut -d. -f1,2,3)
+lsv=$(ifconfig eth1 | grep inet\ addr | awk '{print $2}' | cut -d: -f2 | cut -d. -f4)
+
+while [ $count -gt 0 ] 
+do 
+	if [ $lsv -eq $maxvalue ] ; then 
+	   echo " this is the limit"
+	fi
+	   echo "--->" $basevalue.$lsv
+	lsv=$(($lsv + 1 ))
+	count=$(($count - 1 ))
+done
+	echo "--------------"
+
+
+
+
