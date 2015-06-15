@@ -1,0 +1,18 @@
+#!/bin/bash
+
+localip=`ifconfig eth1 | grep inet\ addr | awk '{print $2}' | cut -d: -f2`
+publicip=`dig +short myip.opendns.com @resolver1.opendns.com`
+geolocation=`curl ipinfo.io/$publicip`
+echo "Executing the script to obtail details.."
+echo "...."
+
+sleep 20 
+
+echo "The local IP address of the machine is "
+echo "$localip"
+
+echo "The public ip address of the machine is"
+echo "$publicip"
+
+echo "Your approximate Geo location is as follows, unless you are using a proxy"
+echo "$geolocation"
