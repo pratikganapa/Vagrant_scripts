@@ -6,13 +6,17 @@ geolocation=`curl ipinfo.io/$publicip`
 echo "Executing the script to obtail details.."
 echo "...."
 
-sleep 20 
+sleep 5
 
 echo "The local IP address of the machine is "
 echo "$localip"
+sleep 2
+echo "........"
 
 echo "The public ip address of the machine is"
 echo "$publicip"
+sleep 2 
+echo ".........."
 
 echo "Your approximate Geo location is as follows, unless you are using a proxy"
 echo "$geolocation"
