@@ -17,7 +17,8 @@ Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 # Cmnd alias specification
 
 # User privilege specification
-#root	ALL=(ALL:ALL) ALL
+#will see if i can create a pull request
+root	ALL=(ALL:ALL) ALL
 pratik ALL=(ALL:ALL) ALL
 # Members of the admin group may gain root privileges
 %admin ALL=(ALL) NOPASSWD:ALL
